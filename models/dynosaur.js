@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 // const { sequelize } = require(".");
 
-module.exports = (sequelize) => {
+module.exports = sequelize => {
   const Dynosaur = sequelize.define("Dynosaur", {
     name: {
       type: DataTypes.STRING,
