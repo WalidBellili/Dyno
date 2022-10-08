@@ -17,3 +17,11 @@ const connectDB = async () => {
   }
 };
 connectDB();
+
+const Dynosaur = require("./dynosaur")(sequelize);
+sequelize.sync({ alter: true });
+
+module.exports = {
+  sequelize,
+  Dynosaur,
+};
